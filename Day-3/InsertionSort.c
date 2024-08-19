@@ -1,8 +1,12 @@
 #include <stdio.h>
 #include <time.h>
+
 void selection(int *, int);
+
 void insertion(int *, int);
+
 void revselection(int *, int);
+
 int main()
 {
     FILE *ptr;
@@ -21,7 +25,7 @@ int main()
     t1 = clock();
     insertion(a, n);
     t2 = clock();
-    t = (double)((t2 - t1) / CLOCKS_PER_SEC * 1e9); //nanosecods 
+    t = (double)((t2 - t1) / CLOCKS_PER_SEC * 1e9); // nanosecods
     printf("\nBest case time is %lf", t);
     revselection(a, n);
     t1 = clock();
@@ -32,22 +36,22 @@ int main()
 }
 void selection(int *a, int n)
 {
-    int i, j, minind, temp;
+    int i, j, min, temp;
     for (i = 0; i < n - 1; i++)
     {
-        minind = i;
+        min = i;
         for (j = i + 1; j < n; j++)
         {
-            if (a[j] < a[minind])
+            if (a[j] < a[min])
             {
-                minind = j;
+                min = j;
             }
         }
-        if (minind != i)
+        if (min != i)
         {
             temp = a[i];
-            a[i] = a[minind];
-            a[minind] = temp;
+            a[i] = a[min];
+            a[min] = temp;
         }
     }
 }
@@ -68,22 +72,22 @@ void insertion(int *arr, int n)
 }
 void revselection(int *a, int n)
 {
-    int i, j, minind, temp;
+    int i, j, max, temp;
     for (i = 0; i < n - 1; i++)
     {
-        minind = i;
+        max = i;
         for (j = i + 1; j < n; j++)
         {
-            if (a[j] > a[minind])
+            if (a[j] > a[max])
             {
-                minind = j;
+                max = j;
             }
         }
-        if (minind != i)
+        if (max != i)
         {
             temp = a[i];
-            a[i] = a[minind];
-            a[minind] = temp;
+            a[i] = a[max];
+            a[max] = temp;
         }
     }
 }
