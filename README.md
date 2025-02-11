@@ -1,4 +1,4 @@
-## Course Contents : 
+## Course Contents 
 #### 1. Review of Fundamentals of Data Structures like Array, Linked List, Sorting Algorithms.  
 #### 2. Fundamentals of Algorithmic Problem Solving-I: Analysis of time complexity of small algorithms through step/frequency count method. (GCD, Prime Number, Sorting Algorithms)  
 #### 3. Divide and Conquer Method: Binary Search, Merge Sort, Quick Sort, Randomized Quick Sort.  
